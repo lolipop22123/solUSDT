@@ -163,6 +163,14 @@ footer {
   margin-bottom: 1.2rem;
 }
 
+.hero-actions.single {
+  margin-bottom: 1.6rem;
+}
+
+.hero-actions.single .btn {
+  min-width: 220px;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -173,6 +181,9 @@ footer {
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
     border-color 0.2s ease;
   border: 1px solid transparent;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
   cursor: pointer;
 }
 
@@ -185,6 +196,12 @@ footer {
 .btn.primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 20px 50px rgba(48, 209, 161, 0.25);
+}
+
+.btn.copied {
+  background: rgba(48, 209, 161, 0.18);
+  color: var(--accent);
+  box-shadow: 0 12px 40px rgba(48, 209, 161, 0.18);
 }
 
 .btn.secondary {
@@ -521,6 +538,17 @@ main {
   margin-top: 0.6rem;
   font-size: 0.85rem;
   color: rgba(160, 165, 192, 0.8);
+}
+
+.footer .footer-contact {
+  margin-top: 0.4rem;
+  color: rgba(197, 201, 222, 0.9);
+  font-size: 0.95rem;
+}
+
+.footer .footer-contact a {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 @media (min-width: 992px) {
