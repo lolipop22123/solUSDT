@@ -53,6 +53,21 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -10%;
+  width: 80vw;
+  height: 80vw;
+  background: radial-gradient(circle, rgba(48, 209, 161, 0.35), rgba(9, 12, 20, 0));
+  filter: blur(120px);
+  z-index: -1;
+  animation: floatBlob 22s ease-in-out infinite;
 }
 
 .navbar {
@@ -101,8 +116,44 @@ footer {
 
 .hero p {
   color: var(--muted);
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
   font-size: 1.1rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  background: rgba(48, 209, 161, 0.08);
+  border: 1px solid rgba(48, 209, 161, 0.35);
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 12px 40px rgba(48, 209, 161, 0.18);
+}
+
+.hero-badge .pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  position: relative;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+.hero-badge .pulse-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.5;
+  animation: pulse-ring 1.6s ease-in-out infinite;
 }
 
 .hero-actions {
@@ -168,6 +219,7 @@ footer {
   position: relative;
   width: min(420px, 80vw);
   margin: 0 auto;
+  z-index: 1;
 }
 
 .coin {
@@ -182,6 +234,8 @@ footer {
   overflow: hidden;
   box-shadow: 0 30px 80px rgba(48, 209, 161, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.16);
+  animation: floatCoin 10s ease-in-out infinite;
+  will-change: transform;
 }
 
 .coin::before,
@@ -192,11 +246,64 @@ footer {
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.25);
   opacity: 0.6;
+  animation: rotateGlow 18s linear infinite;
+  transform-origin: center;
 }
 
 .coin::after {
   inset: 24%;
   opacity: 0.35;
+  animation-duration: 24s;
+}
+
+@keyframes floatBlob {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(5%, 8%, 0) scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.75);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes floatCoin {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes rotateGlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .coin-inner {
