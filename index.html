@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ethena USDe • Solana</title>
+  <title>TrueUSD • Solana</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Ethena USDe (USDe) — an independent experimental token on Solana, not affiliated with Ethena Labs or the USDe token on other networks."
+    content="TrueUSD (TUSD) — an independent experimental token on Solana, not affiliated with the official TrueUSD stablecoin or its issuing entities."
   />
   <style>
     :root {
       color-scheme: dark;
-      --bg: #03030a;
-      --bg-soft: rgba(7, 12, 24, 0.9);
-      --primary: #9b8cff;
-      --primary-soft: rgba(155, 140, 255, 0.2);
-      --accent: #4ef2c5;
-      --text-main: #f7f7ff;
-      --text-muted: #9ca3c5;
-      --border-subtle: rgba(255, 255, 255, 0.06);
+      --bg: #010410;
+      --bg-soft: rgba(5, 9, 22, 0.9);
+      --primary: #3f84ff;
+      --primary-soft: rgba(63, 132, 255, 0.2);
+      --accent: #f4c061;
+      --text-main: #f5f7ff;
+      --text-muted: #9fb2d9;
+      --border-subtle: rgba(255, 255, 255, 0.08);
     }
     * {
       box-sizing: border-box;
@@ -29,9 +29,9 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
       color: var(--text-main);
       background:
-        radial-gradient(circle at 0% 0%, rgba(155, 140, 255, 0.38), transparent 55%),
-        radial-gradient(circle at 100% 100%, rgba(78, 242, 197, 0.22), transparent 55%),
-        radial-gradient(circle at 100% 0%, rgba(16, 185, 255, 0.26), transparent 45%),
+        radial-gradient(circle at 0% 10%, rgba(63, 132, 255, 0.35), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(244, 192, 97, 0.22), transparent 55%),
+        radial-gradient(circle at 100% 0%, rgba(41, 203, 255, 0.26), transparent 45%),
         var(--bg);
       background-attachment: fixed;
     }
@@ -67,8 +67,8 @@
       gap: 8px;
       padding: 6px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(155, 140, 255, 0.4);
-      background: radial-gradient(circle at 0 0, rgba(155, 140, 255, 0.2), rgba(10, 16, 32, 0.9));
+      border: 1px solid rgba(63, 132, 255, 0.5);
+      background: radial-gradient(circle at 0 0, rgba(63, 132, 255, 0.2), rgba(6, 12, 26, 0.92));
       font-size: 0.78rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -96,7 +96,7 @@
       gap: 10px;
     }
     h1 span.accent {
-      background: linear-gradient(120deg, #ffffff, #e0ddff, #9b8cff, #4ef2c5);
+      background: linear-gradient(115deg, #fefefe, #d7e8ff, #73b4ff, #f4c061);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -135,15 +135,15 @@
       user-select: none;
     }
     .btn-primary {
-      background: radial-gradient(circle at 0 0, #4ef2c5, #2a9cff);
-      color: #020617;
+      background: radial-gradient(circle at 0 0, #f4c061, #fb923c);
+      color: #120800;
       box-shadow:
         0 12px 45px rgba(0, 0, 0, 0.8),
-        0 0 18px rgba(78, 242, 197, 0.7);
+        0 0 18px rgba(244, 192, 97, 0.7);
     }
     .btn-outline {
-      border-color: rgba(148, 163, 255, 0.45);
-      background: rgba(8, 11, 24, 0.9);
+      border-color: rgba(82, 122, 255, 0.45);
+      background: rgba(5, 9, 22, 0.92);
       color: var(--text-muted);
     }
     .btn span.dot {
@@ -175,17 +175,17 @@
     }
     .card {
       position: relative;
-      background: radial-gradient(circle at 0 0, rgba(155, 140, 255, 0.18), rgba(7, 12, 24, 0.96));
+      background: radial-gradient(circle at 0 0, rgba(63, 132, 255, 0.16), rgba(4, 8, 20, 0.96));
       border-radius: 18px;
       padding: 18px 16px;
-      border: 1px solid rgba(110, 128, 255, 0.32);
+      border: 1px solid rgba(70, 122, 222, 0.35);
       overflow: hidden;
     }
     .card::before {
       content: "";
       position: absolute;
       inset: -40%;
-      background: radial-gradient(circle at 0 0, rgba(148, 163, 255, 0.25), transparent 60%);
+      background: radial-gradient(circle at 0 0, rgba(82, 132, 255, 0.25), transparent 60%);
       opacity: 0;
       transition: opacity 220ms ease-out;
       pointer-events: none;
@@ -250,9 +250,9 @@
       font-size: 0.8rem;
       line-height: 1.7;
       color: var(--text-muted);
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(12, 10, 31, 0.96));
+      background: linear-gradient(140deg, rgba(7, 10, 26, 0.97), rgba(4, 11, 22, 0.95));
       border-radius: 18px;
-      border: 1px solid rgba(71, 85, 173, 0.7);
+      border: 1px solid rgba(77, 114, 205, 0.65);
       padding: 18px 16px 16px;
     }
     .disclaimer-heading {
@@ -323,17 +323,18 @@
         </div>
         <div class="pill">
           <span class="pill-dot"></span>
-          Not affiliated with Ethena Labs
+          Not affiliated with TrueUSD
         </div>
       </div>
       <div class="brand-row">
         <h1>
-          <span class="accent">Ethena&nbsp;USDe</span>
-          <span class="ticker-tag">USDe • Solana</span>
+          <span class="accent">True&nbsp;USD</span>
+          <span class="ticker-tag">TUSD • Solana</span>
         </h1>
         <p class="subtitle">
-          An independent token launched on the Solana network — not a stablecoin, not backed or endorsed
-          by Ethena Labs, and not connected to the USDe token or products on other chains.
+          An independent Solana-native experiment inspired by the TrueUSD brand — not the official TUSD
+          stablecoin, not backed or redeemable by TrueUSD Limited / Archblock, and not connected to the
+          multichain TUSD product elsewhere.
         </p>
         <div class="cta-row">
           <button class="btn btn-primary" type="button">
@@ -368,24 +369,24 @@
               <span class="label">Token name</span>
               <span class="tag-soft">Independent</span>
             </div>
-            <div class="value">Ethena USDe</div>
+            <div class="value">TrueUSD (Solana)</div>
           </div>
           <div class="card">
             <div class="card-header">
               <span class="label">Ticker</span>
               <span class="tag-soft">Symbol</span>
             </div>
-            <div class="value">$USDe</div>
+            <div class="value">TUSD</div>
           </div>
         </div>
 
         <div class="card section">
           <div class="section-title">About the token</div>
           <div class="section-body">
-            Ethena USDe ($USDe) on Solana is an independent, experimental community token.
-            It is <span class="em">not</span> a stablecoin, does not target any peg, and carries no
-            promise of yield, backing, or redemption. There is no guarantee of value, liquidity,
-            or future utility — it exists purely as a speculative and experimental crypto asset.
+            TrueUSD ($TUSD) on Solana is a community-built experiment that borrows the familiar TUSD ticker
+            but has <span class="em">no redeemability, peg, or collateral backing</span>. It does not
+            represent fiat reserves or the official TrueUSD stablecoin. Use at your own risk — the token’s
+            purpose is purely speculative and educational.
           </div>
           <div class="section" style="margin-top: 14px;">
             <div class="section-title">Solana mint address</div>
@@ -397,9 +398,9 @@
           <div class="section" style="margin-top: 14px;">
             <div class="section-title">No cross‑chain relation</div>
             <div class="section-body">
-              If you see a token named “Ethena USDe” or using the ticker “USDe” on other networks
-              (for example Ethereum or any L2), those assets are
-              <span class="em">separate and unrelated</span> to this Solana token.
+              If you see “TrueUSD” or “TUSD” on Ethereum, Tron, BSC, or any L2, those are part of the
+              official stablecoin ecosystem and are <span class="em">not related</span> to this Solana-only
+              community project.
             </div>
           </div>
         </div>
@@ -409,13 +410,13 @@
             <span></span>
             Legal & risk disclaimer
           </div>
-          <div class="disclaimer-heading">Independence from Ethena Labs & USDe</div>
+          <div class="disclaimer-heading">Independence from TrueUSD stablecoin</div>
           <p>
-            The Ethena USDe ($USDe) token on Solana is an independent token that is
-            <strong>not issued, backed, endorsed, or affiliated</strong> with Ethena Labs, the official
-            USDe product, or any related entities. It has no economic, legal, governance, or technical
-            connection to the USDe token or any products/assets under the Ethena brand on other
-            blockchains (including but not limited to Ethereum).
+            The TrueUSD ($TUSD) token on Solana described here is an independent community token that is
+            <strong>not issued, backed, endorsed, or affiliated</strong> with TrueUSD Limited, Archblock,
+            TrustToken, Prime Trust, or any related entities. It has no economic, legal, governance, or
+            technical connection to the official TUSD stablecoin or products on other blockchains
+            (including Ethereum, Tron, or BSC).
           </p>
           <div class="disclaimer-heading">No advice • High risk</div>
           <p>
@@ -429,8 +430,8 @@
     </main>
 
     <footer>
-      <span>© <span id="year"></span> Ethena USDe ($USDe) on Solana.</span>
-      <span>Independent community token • No affiliation with Ethena Labs.</span>
+      <span>© <span id="year"></span> TrueUSD ($TUSD) on Solana.</span>
+      <span>Independent community token • No affiliation with TrueUSD Limited.</span>
     </footer>
   </div>
 
